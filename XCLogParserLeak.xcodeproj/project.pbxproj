@@ -11,6 +11,7 @@
 		A4B0BB2C2CBD484900632B3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0BB2B2CBD484900632B3B /* ContentView.swift */; };
 		A4B0BB2E2CBD484A00632B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B0BB2D2CBD484A00632B3B /* Assets.xcassets */; };
 		A4B0BB312CBD484A00632B3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B0BB302CBD484A00632B3B /* Preview Assets.xcassets */; };
+		A4B0BB3A2CBD488700632B3B /* XCLogParser in Frameworks */ = {isa = PBXBuildFile; productRef = A4B0BB392CBD488700632B3B /* XCLogParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A4B0BB2D2CBD484A00632B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4B0BB302CBD484A00632B3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4B0BB322CBD484A00632B3B /* XCLogParserLeak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCLogParserLeak.entitlements; sourceTree = "<group>"; };
+		A4B0BB3B2CBD4E5200632B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B0BB3A2CBD488700632B3B /* XCLogParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +55,7 @@
 		A4B0BB282CBD484900632B3B /* XCLogParserLeak */ = {
 			isa = PBXGroup;
 			children = (
+				A4B0BB3B2CBD4E5200632B3B /* Info.plist */,
 				A4B0BB292CBD484900632B3B /* XCLogParserLeakApp.swift */,
 				A4B0BB2B2CBD484900632B3B /* ContentView.swift */,
 				A4B0BB2D2CBD484A00632B3B /* Assets.xcassets */,
@@ -85,6 +89,9 @@
 			dependencies = (
 			);
 			name = XCLogParserLeak;
+			packageProductDependencies = (
+				A4B0BB392CBD488700632B3B /* XCLogParser */,
+			);
 			productName = XCLogParserLeak;
 			productReference = A4B0BB262CBD484900632B3B /* XCLogParserLeak.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +120,9 @@
 				Base,
 			);
 			mainGroup = A4B0BB1D2CBD484900632B3B;
+			packageReferences = (
+				A4B0BB382CBD488700632B3B /* XCRemoteSwiftPackageReference "XCLogParser" */,
+			);
 			productRefGroup = A4B0BB272CBD484900632B3B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +287,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"XCLogParserLeak/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XCLogParserLeak/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +313,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"XCLogParserLeak/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XCLogParserLeak/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4B0BB382CBD488700632B3B /* XCRemoteSwiftPackageReference "XCLogParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MobileNativeFoundation/XCLogParser.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.2.39;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4B0BB392CBD488700632B3B /* XCLogParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4B0BB382CBD488700632B3B /* XCRemoteSwiftPackageReference "XCLogParser" */;
+			productName = XCLogParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4B0BB1E2CBD484900632B3B /* Project object */;
 }
